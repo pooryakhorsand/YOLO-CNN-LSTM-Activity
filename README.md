@@ -31,14 +31,29 @@ To effectively track restaurant workers using YOLO, a custom dataset was created
 ### Overview
 To recognize various human activities, a separate dataset was created that captures the actions of restaurant workers in defined scenarios, allowing for the classification of activities performed by multiple individuals.
 
+### Activity Labels
+The following activities are defined for classification:
+- **Working**: Engaged in productive tasks.
+- **Sitting and Working**: In a seated position while performing work tasks.
+- **Not Working**: Includes other activities such as:
+  - Sleeping
+  - Using the phone
+  - Sitting and Talking
+  - Eating food
+
+### Classification Logic
+In the dataset, we label the activities as follows:
+- If a worker is **Working** or **Sitting and Working**, we assign them the label **"Working"**.
+- All other activities (Sleeping, Using the phone, Sitting and Talking, Eating food) are labeled as **"Not Working"**.
+
 ### Steps for Dataset Creation:
-1. **Data Collection**: Record videos capturing workers engaged in diverse activities within the restaurant, such as cooking, serving, cleaning, and interacting with customers.
+1. **Data Collection**: Record videos capturing workers engaged in diverse activities within the restaurant, focusing on the above-defined activities.
 
 2. **Frame Extraction**:
    - Extract frames from each video at a consistent interval (e.g., every 5 or 10 frames). Each extracted frame should be labeled with the corresponding activity being conducted during that time.
 
 3. **Annotation**:
-   - Annotate activity labels for sequences of frames to indicate which specific activity is being performed. Ensure that each group of frames corresponds to particular actions performed by the workers.
+   - Annotate activity labels for sequences of frames to indicate which specific activity is being performed, ensuring that each group of frames corresponds to particular actions performed by the workers.
 
 4. **Data Preparation**:
    - Preprocess images to a uniform size and normalize pixel values. Arrange the data into sequences suitable for input into the LSTM-CNN model, adhering to the desired input shape (e.g., `[samples, time steps, height, width, channels]`).
