@@ -47,9 +47,6 @@ https://github.com/user-attachments/assets/b645b127-285f-4436-a7ab-49d76277cf15
 
 
 https://github.com/user-attachments/assets/7cb3d2e2-2bd6-4034-a0a9-2ef9a67a1749
-
-
-
 https://github.com/user-attachments/assets/f59ae2fe-1c14-4b2c-98a2-81fcf8649083
 
 
@@ -62,11 +59,26 @@ https://github.com/user-attachments/assets/f59ae2fe-1c14-4b2c-98a2-81fcf8649083
 ### LSTM-CNN Activity Recognition Results:
 - The LSTM-CNN model, trained on the activity recognition dataset, accurately classifies the defined activities even when there are multiple workers present. Include metrics such as accuracy, F1 score, and confusion matrix to demonstrate the model's performance. Showcase sample predictions to illustrate the scenarios where the model excels and any areas needing improvement.
 
-### Conclusion
-This project combines powerful computer vision techniques to analyze human activities in a restaurant setting. The insights gained can help improve workflow efficiency and productivity for restaurant operations.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+https://github.com/user-attachments/assets/1ceccc9c-4f7a-44d6-b662-b8ce6a81aee4
+
+
+https://github.com/user-attachments/assets/49f7e79e-f039-4ee5-9582-8d70fcbfcea4
+
+
+
+https://github.com/user-attachments/assets/d852f05e-428d-421f-9116-2839f6fb46fd
+
+
+
+
+https://github.com/user-attachments/assets/5c296260-43bd-437f-8d18-364fa5e92521
+
+
+
+
+
 
 ## Acknowledgments
 - [YOLO](https://pjreddie.com/darknet/yolo/) for object detection.
