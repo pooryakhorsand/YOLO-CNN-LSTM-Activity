@@ -25,6 +25,12 @@ To effectively track restaurant workers using YOLO, a custom dataset was created
 
 4. **Dataset Split**: 
    - Split the dataset into training, validation, and test sets (typically 70% training, 15% validation, 15% testing).
+  
+   
+
+https://github.com/user-attachments/assets/2996aa1c-6636-4792-a3e5-4ba74063b99b
+
+
 
 ## 2. Dataset Creation for LSTM-CNN Activity Recognition
 
