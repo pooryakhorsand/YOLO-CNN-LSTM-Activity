@@ -11,17 +11,17 @@ This project aims to monitor and analyze human activities of restaurant workers 
 ## 1. Dataset Creation for YOLO Person Tracking
 
 ### Overview
-To effectively track restaurant workers using YOLO, a custom dataset was created, consisting of annotated images and videos that capture various scenarios in a restaurant environment.
+To effectively track restaurant workers using YOLO, a custom dataset was created, consisting solely of annotated images that focus on detecting the presence of individuals in a restaurant environment, without specific scenarios.
 
 ### Steps for Dataset Creation:
-1. **Data Collection**: Gather images and videos of restaurant workers in various situations, such as serving food, taking orders, cleaning tables, etc. Ensure the dataset includes a diverse range of scenarios, angles, and lighting conditions.
+1. **Data Collection**: Gather images of restaurant workers in various settings—focusing on different angles and lighting to ensure diversity. The key is to include a variety of worker poses and positions.
 
 2. **Annotation**:
-   - Use annotation tools (e.g., LabelImg, VGG Image Annotator) to label the images. The annotations should include bounding boxes around each person, categorized as ‘worker’ or ‘non-worker’.
+   - Utilize annotation tools (e.g., LabelImg, VGG Image Annotator) to label the images. The annotations should include bounding boxes around each worker.
    - Save annotations in the YOLO format (a text file for each image that includes the class label and coordinates of the bounding boxes).
 
 3. **Data Augmentation**:
-   - To enhance the dataset, apply data augmentation techniques such as flipping, rotation, cropping, and color adjustments. This helps improve the model's robustness against overfitting.
+   - Enhance the dataset by applying data augmentation techniques such as flipping, rotation, cropping, and color adjustments to improve the model's performance.
 
 4. **Dataset Split**: 
    - Split the dataset into training, validation, and test sets (typically 70% training, 15% validation, 15% testing).
@@ -29,32 +29,32 @@ To effectively track restaurant workers using YOLO, a custom dataset was created
 ## 2. Dataset Creation for LSTM-CNN Activity Recognition
 
 ### Overview
-For recognizing different human activities, a second dataset was created that incorporates temporal dynamics via video frames.
+To recognize various human activities, a separate dataset was created that captures the actions of restaurant workers in defined scenarios, allowing for the classification of activities performed by multiple individuals.
 
 ### Steps for Dataset Creation:
-1. **Data Collection**: Similar to the YOLO dataset but with a focus on capturing sequences of activities. Record videos of various activities performed by workers, such as cooking, serving, cleaning, and interacting with customers.
+1. **Data Collection**: Record videos capturing workers engaged in diverse activities within the restaurant, such as cooking, serving, cleaning, and interacting with customers.
 
 2. **Frame Extraction**:
-   - From each recorded video, extract frames at a consistent rate (e.g., every 5 or 10 frames). Label each frame with the corresponding activity.
+   - Extract frames from each video at a consistent interval (e.g., every 5 or 10 frames). Each extracted frame should be labeled with the corresponding activity being conducted during that time.
 
 3. **Annotation**:
-   - Annotate activity labels for each sequence of frames to indicate which activity is being performed. Ensure that each group of frames corresponds to a specific human activity.
+   - Annotate activity labels for sequences of frames to indicate which specific activity is being performed. Ensure that each group of frames corresponds to particular actions performed by the workers.
 
 4. **Data Preparation**:
-   - Preprocess the images to a uniform size and normalize pixel values. Create sequences of frames to input into the LSTM-CNN model, organizing the data into an appropriate format (e.g., input shape of `[samples, time steps, height, width, channels]`).
+   - Preprocess images to a uniform size and normalize pixel values. Arrange the data into sequences suitable for input into the LSTM-CNN model, adhering to the desired input shape (e.g., `[samples, time steps, height, width, channels]`).
 
-5. **Dataset Split**: As with the YOLO dataset, split this dataset into training, validation, and testing sets.
+5. **Dataset Split**: Like the YOLO dataset, this dataset should be split into training, validation, and testing sets.
 
 ## 3. Results
 
 ### YOLO Person Tracking Results:
-- After training the YOLO model, it successfully detects workers in various scenarios within the restaurant environment. The precision and recall metrics for worker detection can be summarized here, showcasing the performance of the model.
+- The YOLO model, after training on the person tracking dataset, is capable of detecting workers within the restaurant environment accurately. Discuss the precision and recall metrics that highlight the model's effectiveness in identifying individuals.
 
 ### LSTM-CNN Activity Recognition Results:
-- Upon training the LSTM-CNN model, it demonstrated accurate classification of the defined activities. Present various metrics (such as accuracy, F1 score, confusion matrix) to illustrate the model's performance. Include sample predictions to highlight scenarios where the model performs well and any challenging cases.
+- The LSTM-CNN model, trained on the activity recognition dataset, accurately classifies the defined activities even when there are multiple workers present. Include metrics such as accuracy, F1 score, and confusion matrix to demonstrate the model's performance. Showcase sample predictions to illustrate the scenarios where the model excels and any areas needing improvement.
 
 ### Conclusion
-This project combines powerful techniques in computer vision to analyze human activity in a restaurant setting. The insights gained from this analysis can be invaluable for improving efficiency and productivity in restaurant operations.
+This project combines powerful computer vision techniques to analyze human activities in a restaurant setting. The insights gained can help improve workflow efficiency and productivity for restaurant operations.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
