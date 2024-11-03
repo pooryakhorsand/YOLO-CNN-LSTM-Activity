@@ -16,7 +16,11 @@ To effectively track restaurant workers using YOLO, a custom dataset was created
   
    
 
-https://github.com/user-attachments/assets/2996aa1c-6636-4792-a3e5-4ba74063b99b
+https://github.com/user-attachments/assets/1fbe45f1-1370-4c8f-81d6-0f6f06f8c105
+
+
+
+
 
 
 
