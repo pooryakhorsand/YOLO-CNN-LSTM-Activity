@@ -13,18 +13,6 @@ This project aims to monitor and analyze human activities of restaurant workers 
 ### Overview
 To effectively track restaurant workers using YOLO, a custom dataset was created, consisting solely of annotated images that focus on detecting the presence of individuals in a restaurant environment, without specific scenarios.
 
-### Steps for Dataset Creation:
-1. **Data Collection**: Gather images of restaurant workers in various settings—focusing on different angles and lighting to ensure diversity. The key is to include a variety of worker poses and positions.
-
-2. **Annotation**:
-   - Utilize annotation tools (e.g., LabelImg, VGG Image Annotator) to label the images. The annotations should include bounding boxes around each worker.
-   - Save annotations in the YOLO format (a text file for each image that includes the class label and coordinates of the bounding boxes).
-
-3. **Data Augmentation**:
-   - Enhance the dataset by applying data augmentation techniques such as flipping, rotation, cropping, and color adjustments to improve the model's performance.
-
-4. **Dataset Split**: 
-   - Split the dataset into training, validation, and test sets (typically 70% training, 15% validation, 15% testing).
   
    
 
@@ -52,21 +40,7 @@ In the dataset, we label the activities as follows:
 - If a worker is **Working** or **Sitting and Working**, we assign them the label **"Working"**.
 - All other activities (Sleeping, Using the phone, Sitting and Talking, Eating food) are labeled as **"Not Working"**.
 
-### Steps for Dataset Creation:
-1. **Data Collection**: Record videos capturing workers engaged in diverse activities within the restaurant, focusing on the above-defined activities.
 
-2. **Frame Extraction**:
-   - Extract frames from each video at a consistent interval (e.g., every 5 or 10 frames). Each extracted frame should be labeled with the corresponding activity being conducted during that time.
-
-3. **Annotation**:
-   - Annotate activity labels for sequences of frames to indicate which specific activity is being performed, ensuring that each group of frames corresponds to particular actions performed by the workers.
-
-4. **Data Preparation**:
-   - Preprocess images to a uniform size and normalize pixel values. Arrange the data into sequences suitable for input into the LSTM-CNN model, adhering to the desired input shape (e.g., `[samples, time steps, height, width, channels]`).
-
-5. **Dataset Split**: Like the YOLO dataset, this dataset should be split into training, validation, and testing sets.
-
-   
 
 https://github.com/user-attachments/assets/b645b127-285f-4436-a7ab-49d76277cf15
 
