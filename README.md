@@ -25,24 +25,13 @@ https://github.com/user-attachments/assets/19831596-9182-4d46-8aa7-285e6a91309c
 
 
 
+https://github.com/user-attachments/assets/5eda444a-5cf6-4d44-9d05-aaabb29dd3cf
 
 
 
 
-## 2. Dataset Creation for LSTM-CNN Activity Recognition
 
-### Overview
-To recognize various human activities, a separate dataset was created that captures the actions of restaurant workers in defined scenarios, allowing for the classification of activities performed by multiple individuals.
-
-### Activity Labels
-The following activities are defined for classification:
-- **Working**: Engaged in productive tasks.
-- **Sitting and Working**: In a seated position while performing work tasks.
-- **Not Working**: Includes other activities such as:
-  - Sleeping
-  - Using the phone
-  - Sitting and Talking
-  - Eating food
+https://github.com/user-attachments/assets/67d94237-14ca-44a2-a393-c5d411691fff
 
 
 
@@ -50,8 +39,3 @@ The following activities are defined for classification:
 
 
 
-
-
-## Acknowledgments
-- [YOLO](https://pjreddie.com/darknet/yolo/) for object detection.
-- [Keras](https://keras.io/) and [TensorFlow](https://www.tensorflow.org/) for deep learning frameworks.
